@@ -1397,26 +1397,26 @@ class MetadataVisitors(Stream):
 # This dict is ordered so that child stream(s) are occurring just above parent stream.
 STREAMS = {
     "accounts": Accounts,
-    "events": Events,
+#    "events": Events,
     "feature_events": FeatureEvents,
     "features": Features,
     "guide_events": GuideEvents,
     "guides": Guides,
     "metadata_accounts": MetadataAccounts,
     "metadata_visitors": MetadataVisitors,
-    "page_events": PageEvents,
-    "pages": Pages,
+#    "page_events": PageEvents,
+#    "pages": Pages,
     "poll_events": PollEvents,
-    "track_events": TrackEvents,
-    "track_types": TrackTypes,
-    "visitor_history": VisitorHistory,
+#    "track_events": TrackEvents,
+#    "track_types": TrackTypes,
+#    "visitor_history": VisitorHistory,
     "visitors": Visitors
 }
 
 SUB_STREAMS = {
-    'visitors': 'visitor_history',
+#    'visitors': 'visitor_history',
     'features': 'feature_events',
-    'pages': 'page_events',
-    'guides': 'guide_events',
-    'track_types': 'track_events'
+#    'pages': 'page_events',
+    'guides': 'guide_events'
+#    'track_types': 'track_events'
 }
