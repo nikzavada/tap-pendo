@@ -3,8 +3,12 @@
   "additional_properties": false,
   "properties": {
     "agent": {
-      "language": {
-        "$ref": "metadata.json"
+      "type": ["null", "object"],
+      "additional_properties": false,
+      "properties": {
+        "language": {
+          "$ref": "metadata.json"
+        }
       }
     },
     "auto": {
