@@ -247,6 +247,29 @@
     "published_at": {
       "type": ["null", "string"],
       "format": "date-time"
+    },
+    "pools": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "object"],
+        "properties": {
+          "id": {
+            "type": ["null", "string"]
+          },
+          "question": {
+            "type": ["null", "string"]
+          },
+          "attributes": {
+            "type": ["null", "object"],
+            "properties": {
+              "type": {
+                "type": ["null", "string"]
+              }
+            }
+          },
+          "additionalProperties": true
+        }
+      }
     }
   }
 }
