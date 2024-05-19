@@ -266,8 +266,7 @@
                 "type": ["null", "string"]
               }
             }
-          },
-          "additionalProperties": true
+          }
         }
       }
     }
