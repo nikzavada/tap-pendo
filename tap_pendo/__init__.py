@@ -11,7 +11,7 @@ from tap_pendo.discover import discover_streams
 from tap_pendo.streams import STREAMS, SUB_STREAMS, update_currently_syncing
 from tap_pendo.sync import sync_full_table, sync_stream
 
-REQUIRED_CONFIG_KEYS = ["start_date", "x_pendo_integration_key", "period"]
+REQUIRED_CONFIG_KEYS = ["start_date", "x_pendo_integration_key", "period", "streams"]
 
 LOGGER = singer.get_logger()
 
@@ -83,12 +83,13 @@ def load_schemas():
     return schemas
 
 
-def get_selected_streams(catalog):
+def get_selected_streams(catalog, config):
+    streams_list = config.get("streams").split(',')
     # Return list of all the selected streams in catalog
     selected_stream_ids = []
     for stream in catalog.streams:
         mdata = metadata.to_map(stream.metadata)
-        if stream_is_selected(mdata):
+        if stream_is_selected(mdata) and stream.tap_stream_id in streams_list:
             selected_stream_ids.append(stream.tap_stream_id)
     return selected_stream_ids
 
@@ -97,7 +98,7 @@ def sync(config, state, catalog):
     LOGGER.info("Starting with state %s", state)
     start_date = config['start_date']
 
-    selected_stream_ids = get_selected_streams(catalog) # Get list of selected streams from catalog
+    selected_stream_ids = get_selected_streams(catalog, config) # Get list of selected streams from catalog
     validate_dependencies(selected_stream_ids) # Validate parent-child streams dependencies
     populate_class_schemas(catalog, selected_stream_ids) # Populate schemas for selected streams
     all_sub_stream_ids = get_sub_stream_ids()
