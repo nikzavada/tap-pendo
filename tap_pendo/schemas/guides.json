@@ -248,7 +248,7 @@
       "type": ["null", "string"],
       "format": "date-time"
     },
-    "pools": {
+    "polls": {
       "type": ["null", "array"],
       "items": {
         "type": ["null", "object"],
