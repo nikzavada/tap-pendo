@@ -266,6 +266,12 @@
                 "type": ["null", "string"]
               }
             }
+          },
+          "numericResponses": {
+            "type": ["null", "array"],
+            "items": {
+              "type": ["null", "integer"]
+            }
           }
         }
       }
