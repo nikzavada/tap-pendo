@@ -274,17 +274,14 @@
             }
           },
           "id_responses": {
-            "type": ["null", "array"],
-            "items": {
-              "type": ["null", "object"],
-              "properties": {
-                "0": {
-                  "type": ["null", "string"]
-                }                
-              },
-              "additional_properties": {
+            "type": ["null", "object"],
+            "properties": {
+              "0": {
                 "type": ["null", "string"]
-              }
+              }                
+            },
+            "additional_properties": {
+              "type": ["null", "string"]
             }
           }
         }
