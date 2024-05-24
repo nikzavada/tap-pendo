@@ -267,7 +267,7 @@
               }
             }
           },
-          "numericResponses": {
+          "numeric_responses": {
             "type": ["null", "array"],
             "items": {
               "type": ["null", "integer"]
