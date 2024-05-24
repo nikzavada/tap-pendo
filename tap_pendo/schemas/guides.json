@@ -277,8 +277,6 @@
             "type": ["null", "array"],
             "items": {
               "type": ["null", "object"],
-              "properties": {
-              },
               "additional_properties": true
             }
           }
