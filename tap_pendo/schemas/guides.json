@@ -275,12 +275,9 @@
           },
           "id_responses": {
             "type": ["null", "object"],
-            "properties": {
-              "0": {
-                "type": ["null", "string"]
-              }                
-            },
-            "additional_properties": true
+            "additional_properties": {
+              "type": ["null", "string"]
+            }
           }
         }
       }
