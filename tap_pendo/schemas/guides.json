@@ -280,9 +280,7 @@
                 "type": ["null", "string"]
               }                
             },
-            "additional_properties": {
-              "type": ["null", "string"]
-            }
+            "additional_properties": true
           }
         }
       }
